@@ -22,7 +22,7 @@ public class HomePageTestCase extends BaseClass {
   public void verifyTitle()
   {
 	String actTitle=hp.getAppTitle(); 
-	Assert.assertTrue(actTitle.contains("customer"),"Test Fail: Title is not matched!");
+	Assert.assertTrue(actTitle.contains("Customer"),"Test Fail: Title is not matched!");
 	System.out.println("Test Pass! Title matched");
   }
   

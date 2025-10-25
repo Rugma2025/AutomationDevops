@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
+import com.CRM.util.Utility;
+
 public class HomePage {
 	//encapsulation = private data+public member
 	private WebDriver driver;
@@ -29,12 +31,21 @@ public class HomePage {
 	}
 	public String getAppTitle()
 	{
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return driver.getTitle();
 	}
 	
 	public String testSignInLink()
 	{
+		Utility.getScreenShot(driver);
 		driver.findElement(link).click();
+		
+		Utility.getScreenShot(driver);
 		return driver.getCurrentUrl();
 	}
 	
